@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.ContactUsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-11-19T21:22:04" hostname="udemycourse" time="1.904">
+  <properties/>
+  <testcase name="UserCanUseContactUs" classname="tests.ContactUsTest" time="1.904"/>
+  <system-out><![CDATA[No features found at [classpath:tests]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

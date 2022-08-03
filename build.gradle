@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+}
+
+group 'Demo'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    useTestNG() {
+        useDefaultListeners = true
+        suites 'src/test/resources/regressionSuite.xml'
+    }
+}
+
+dependencies {
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.14.0'
+    compile group: 'info.cukes', name: 'cucumber-java', version: '1.2.5'
+    compile group: 'info.cukes', name: 'cucumber-core', version: '1.2.5'
+    compile group: 'info.cukes', name: 'cucumber-testng', version: '1.2.5'
+    compile group: 'io.cucumber', name: 'gherkin', version: '6.0.14'
+    compile group: 'com.opencsv', name: 'opencsv', version: '4.4'
+    compile group: 'io.qameta.allure', name: 'allure-testng', version: '2.8.1'
+    compile group: 'com.codeborne', name: 'phantomjsdriver', version: '1.4.4'
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '4.0.0'
+    compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+    compile group: 'com.github.javafaker', name: 'javafaker', version: '0.16'
+    testCompile group: 'org.testng', name: 'testng', version: '6.14.3'
+}

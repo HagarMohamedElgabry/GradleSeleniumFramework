@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Suite" parallel="tests" thread-count="2">
+
+	<test name="Chrome Regression Test">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="tests.UserRegistrationParallelTesting" />
+		</classes>
+	</test>
+
+	<test name="Firefox Regression Test">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="tests.MyAccountPT" />
+		</classes>
+	</test>
+</suite> 

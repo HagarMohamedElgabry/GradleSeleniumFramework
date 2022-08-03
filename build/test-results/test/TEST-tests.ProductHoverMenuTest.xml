@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.ProductHoverMenuTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-11-19T21:22:03" hostname="udemycourse" time="0.908">
+  <properties/>
+  <testcase name="UserCanSelectSubCategoryFromMainMenu" classname="tests.ProductHoverMenuTest" time="0.908"/>
+  <system-out><![CDATA[No features found at [classpath:tests]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

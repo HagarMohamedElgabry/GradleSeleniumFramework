@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.UserRegistrationTestWithJavaFaker" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-11-19T21:22:06" hostname="udemycourse" time="4.653">
+  <properties/>
+  <testcase name="UserCanRegisterSuccssfully" classname="tests.UserRegistrationTestWithJavaFaker" time="2.217"/>
+  <testcase name="RegisteredUserCanLogout" classname="tests.UserRegistrationTestWithJavaFaker" time="0.832"/>
+  <testcase name="RegisteredUserCanLogin" classname="tests.UserRegistrationTestWithJavaFaker" time="1.566"/>
+  <system-out><![CDATA[No features found at [classpath:tests]
+The Userr Data is : Barbara Pagac sanford.orn@hotmail.com 26110786
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
