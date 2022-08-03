@@ -1,5 +1,5 @@
 # seleniumFramework
-selenium Framework project using Java , Maven , TestNG and POM
+selenium Framework project using Java , Gradle ,allure report and TestNG 
 
 And we are using BDD and DDT frameworks in the project
 
@@ -7,7 +7,7 @@ And we are using BDD and DDT frameworks in the project
 # Tech Stach:
 
 - Java 
-- Maven 
+- gradle 
 - TestNG 
 - BDD
 - DDT
