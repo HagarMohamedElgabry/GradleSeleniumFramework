@@ -22,13 +22,13 @@ jobs:
       fail-fast: false
     name: JAVA ${{ matrix.java }} OS ${{ matrix.os }}
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - name: Set up JDK
       uses: actions/setup-java@v1
       with:
         java-version: ${{ matrix.java }}
     - name: Build with Gradle
-      run: ./gradlew build bitcoinj-walletfx-template:jpackage --info --stacktrace
+      run: ./gradlew build --no-daemon
     - name: Upload jpackage directory as artifact
       uses: actions/upload-artifact@master
       with:
