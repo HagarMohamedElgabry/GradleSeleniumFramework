@@ -7,28 +7,30 @@
 
 name: Java CI with Gradle
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
-permissions:
-  contents: read
+on: [push, pull_request]
 
 jobs:
   build:
-
-    runs-on: macos-latest
-
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macOS-latest]
+        # TODO: Fix windows tests and re-enable windows
+        #os: [ubuntu-latest, macOS-latest, windows-latest]
+        java: [ '11' ]
+      fail-fast: false
+    name: JAVA ${{ matrix.java }} OS ${{ matrix.os }}
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up JDK 11
-      uses: actions/setup-java@v3
+    - uses: actions/checkout@v1
+    - name: Set up JDK
+      uses: actions/setup-java@v1
       with:
-        java-version: '11'
-        distribution: 'temurin'
+        java-version: ${{ matrix.java }}
     - name: Build with Gradle
-      uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
+      run: ./gradlew build bitcoinj-walletfx-template:jpackage --info --stacktrace
+    - name: Upload jpackage directory as artifact
+      uses: actions/upload-artifact@master
       with:
-        arguments: build
+        name: wallettemplate-${{ matrix.os }}-jdk${{ matrix.java }}-jpackage
+        path: bitcoinj-walletfx-template/build/jpackage
